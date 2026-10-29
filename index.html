@@ -1,0 +1,3339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Piyush Sharma | Cloud & Electronics Engineer</title>
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+
+        .section-subtitle {
+            color: #94a3b8;
+            margin-bottom: 45px;
+            max-width: 750px;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(3, 10, 20, 0.95);
+            border-bottom: 1px solid #1e293b;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 80% 20%, #0c4a6e55, transparent 30%),
+                radial-gradient(circle at 20% 80%, #0369a155, transparent 25%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #0ea5e9;
+            border-radius: 25px;
+            color: #38bdf8;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #cbd5e1;
+            max-width: 800px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 7px;
+            background: #0284c7;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0369a1;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .btn-outline:hover {
+            background: #38bdf8;
+            color: #07111f;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+        }
+
+        .about-text {
+            color: #cbd5e1;
+            font-size: 17px;
+        }
+
+        .about-card {
+            background: #0f1d2e;
+            padding: 30px;
+            border: 1px solid #1e3a52;
+            border-radius: 12px;
+        }
+
+        .about-card h3 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        .about-card p {
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           QUICK INFO
+        ========================= */
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .info-card {
+            background: #0f1d2e;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #1e293b;
+        }
+
+        .info-card h3 {
+            color: #38bdf8;
+            font-size: 28px;
+        }
+
+        .info-card p {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .timeline {
+            border-left: 3px solid #0ea5e9;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            background: #0f1d2e;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border: 1px solid #1e293b;
+        }
+
+        .timeline-item h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item span {
+            color: #64748b;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skill-category {
+            margin-bottom: 35px;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #0f1d2e;
+            padding: 10px 17px;
+            border-radius: 25px;
+            border: 1px solid #334155;
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #0f1d2e;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: #0ea5e9;
+        }
+
+        .project-number {
+            color: #0284c7;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+        }
+
+        .tech-list {
+            margin-top: 20px;
+            color: #7dd3fc;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CLOUD JOURNEY
+        ========================= */
+
+        .cloud-box {
+            background: linear-gradient(
+                135deg,
+                #0c2a40,
+                #0f1d2e
+            );
+
+            border: 1px solid #075985;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .cloud-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 35px;
+        }
+
+        .cloud-step {
+            padding: 15px 20px;
+            background: #07111f;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: #38bdf8;
+        }
+
+        .arrow {
+            color: #64748b;
+            font-size: 25px;
+        }
+
+
+        /* =========================
+           CI/CD
+        ========================= */
+
+        .pipeline {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+        }
+
+        .pipeline-step {
+            padding: 20px 10px;
+            text-align: center;
+            background: #0f1d2e;
+            border: 1px solid #334155;
+            border-radius: 8px;
+        }
+
+        .pipeline-step strong {
+            display: block;
+            color: #38bdf8;
+            margin-bottom: 8px;
+        }
+
+        .pipeline-step span {
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           LEADERSHIP
+        ========================= */
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .leadership-card {
+            background: #0f1d2e;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+        }
+
+        .leadership-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .leadership-card p {
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           CURRENT LEARNING
+        ========================= */
+
+        .learning-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .learning-item {
+            padding: 25px;
+            background: #0f1d2e;
+            border-radius: 10px;
+            border-left: 4px solid #0284c7;
+        }
+
+        .learning-item h3 {
+            color: #38bdf8;
+        }
+
+        .learning-item p {
+            color: #94a3b8;
+            margin-top: 8px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 750px;
+            margin: auto;
+            padding: 45px;
+            background: #0f1d2e;
+            border: 1px solid #1e293b;
+            border-radius: 15px;
+        }
+
+        .contact-box h2 {
+            font-size: 35px;
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #94a3b8;
+        }
+
+        .contact-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #030a14;
+            padding: 35px 8%;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+        }
+
+        footer h3 {
+            color: #38bdf8;
+        }
+
+        footer p {
+            margin-top: 8px;
+            color: #64748b;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pipeline {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            nav ul {
+                display: none;
+            }
+
+            section {
+                padding: 65px 6%;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .learning-list {
+                grid-template-columns: 1fr;
+            }
+
+            .pipeline {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .cloud-box {
+                padding: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+            PS.
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#cloud">Cloud</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-tag">
+            🚀 Electronics • Cloud • DevOps
+        </div>
+
+        <h1>
+            Hi, I'm <span>Piyush Sharma</span>
+        </h1>
+
+        <h2>
+            Electronics & Communication Engineering Student
+            | Cloud & DevOps Enthusiast
+        </h2>
+
+        <p>
+            I am a B.Tech Electronics & Communication Engineering
+            student with a minor in Computer Science, passionate about
+            technology, embedded systems, cloud computing and modern
+            software infrastructure.
+        </p>
+
+        <p style="margin-top:15px;">
+            Currently building practical skills in AWS, Linux,
+            Networking, Git, GitHub, CI/CD and DevOps through
+            hands-on projects.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn">
+                View Projects
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Connect With Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <p class="section-subtitle">
+            A brief introduction to my academic background,
+            technical interests and current career direction.
+        </p>
+
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I am pursuing B.Tech in Electronics &
+                    Communication Engineering at GLA University,
+                    Mathura, with a minor in Computer Science.
+                </p>
+
+                <br>
+
+                <p>
+                    My technical journey started around electronics,
+                    embedded systems and IoT. I have worked with
+                    microcontrollers, sensors, communication modules
+                    and computer-vision based systems.
+                </p>
+
+                <br>
+
+                <p>
+                    Along with my electronics background, I am now
+                    expanding towards Cloud Computing and DevOps.
+                    I am learning Linux, Networking, AWS, Git,
+                    GitHub, CI/CD and cloud infrastructure.
+                </p>
+
+                <br>
+
+                <p>
+                    My approach is simple: instead of only learning
+                    concepts theoretically, I prefer understanding
+                    them by building practical projects.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h3>🎯 Career Focus</h3>
+
+                <p>
+                    • Cloud Computing
+                </p>
+
+                <p>
+                    • AWS
+                </p>
+
+                <p>
+                    • Linux & Networking
+                </p>
+
+                <p>
+                    • DevOps & CI/CD
+                </p>
+
+                <p>
+                    • Embedded Systems
+                </p>
+
+                <p>
+                    • Electronics
+                </p>
+
+                <p>
+                    • IoT
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     QUICK INFO
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <h3>B.Tech</h3>
+
+                <p>
+                    Electronics & Communication
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>CS</h3>
+
+                <p>
+                    Minor in Computer Science
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>AWS</h3>
+
+                <p>
+                    Cloud Learning
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>DevOps</h3>
+
+                <p>
+                    CI/CD & Automation
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+        <p class="section-subtitle">
+            My academic background and technical specialization.
+        </p>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>
+                    B.Tech — Electronics & Communication Engineering
+                </h3>
+
+                <p>
+                    GLA University, Mathura
+                </p>
+
+                <p>
+                    Minor: Computer Science
+                </p>
+
+                <span>
+                    Undergraduate Engineering
+                </span>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    Academic & Technical Focus
+                </h3>
+
+                <p>
+                    Electronics, Communication Systems, Embedded
+                    Systems, Networking, Programming, Cloud Computing
+                    and Software Technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Technical Skills
+        </h2>
+
+        <p class="section-subtitle">
+            Technologies and tools I am learning and working with.
+        </p>
+
+
+        <div class="skill-category">
+
+            <h3>☁️ Cloud & DevOps</h3>
+
+            <div class="skills">
+
+                <span class="skill">AWS</span>
+                <span class="skill">EC2</span>
+                <span class="skill">Cloud Computing</span>
+                <span class="skill">Git</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">GitHub Actions</span>
+                <span class="skill">CI/CD</span>
+                <span class="skill">Docker</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-category">
+
+            <h3>🐧 Linux & Networking</h3>
+
+            <div class="skills">
+
+                <span class="skill">Linux</span>
+                <span class="skill">Ubuntu</span>
+                <span class="skill">SSH</span>
+                <span class="skill">IP Addressing</span>
+                <span class="skill">TCP/IP</span>
+                <span class="skill">DNS</span>
+                <span class="skill">HTTP/HTTPS</span>
+                <span class="skill">Ports</span>
+                <span class="skill">NAT</span>
+                <span class="skill">Networking Fundamentals</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-category">
+
+            <h3>💻 Programming</h3>
+
+            <div class="skills">
+
+                <span class="skill">C</span>
+                <span class="skill">C++</span>
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-category">
+
+            <h3>🔧 Embedded & IoT</h3>
+
+            <div class="skills">
+
+                <span class="skill">ESP8266</span>
+                <span class="skill">ESP32-CAM</span>
+                <span class="skill">Arduino</span>
+                <span class="skill">MQ-2</span>
+                <span class="skill">DHT11</span>
+                <span class="skill">MLX90614</span>
+                <span class="skill">RFID</span>
+                <span class="skill">Blynk IoT</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-category">
+
+            <h3>📐 Engineering Tools</h3>
+
+            <div class="skills">
+
+                <span class="skill">Arduino IDE</span>
+                <span class="skill">LTspice</span>
+                <span class="skill">Cadence Virtuoso</span>
+                <span class="skill">NI LabVIEW</span>
+                <span class="skill">MATLAB</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-category">
+
+            <h3>🤖 Computer Vision & AI</h3>
+
+            <div class="skills">
+
+                <span class="skill">OpenCV</span>
+                <span class="skill">MediaPipe</span>
+                <span class="skill">LBPH</span>
+                <span class="skill">Machine Learning</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
+
+        <p class="section-subtitle">
+            Practical projects combining electronics, IoT,
+            computer vision and cloud technologies.
+        </p>
+
+
+        <div class="project-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 01
+                </div>
+
+                <h3>
+                    🚗 Smart Gas Detection Car
+                </h3>
+
+                <p>
+                    A Wi-Fi controlled robotic vehicle designed
+                    for gas detection and remote monitoring.
+                    The system uses a gas sensor to detect
+                    hazardous gases and can provide real-time
+                    alerts.
+                </p>
+
+                <p style="margin-top:15px;">
+                    Remote vehicle control and monitoring are
+                    implemented using an IoT-based approach.
+                </p>
+
+                <div class="tech-list">
+                    ESP32-CAM • MQ-2 • L298N • DC Motors • Wi-Fi
+                    • Telegram • IoT
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 02
+                </div>
+
+                <h3>
+                    🔐 Face Recognition Security System
+                </h3>
+
+                <p>
+                    A computer-vision based security system that
+                    performs face recognition and provides
+                    automated access control.
+                </p>
+
+                <p style="margin-top:15px;">
+                    The system uses a camera to identify registered
+                    users and controls a servo-based locking
+                    mechanism.
+                </p>
+
+                <div class="tech-list">
+                    Python • OpenCV • MediaPipe • LBPH • Arduino
+                    • ESP8266 • Servo • Buzzer
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 03
+                </div>
+
+                <h3>
+                    ❤️ HumanCare AI System
+                </h3>
+
+                <p>
+                    An IoT-based monitoring concept designed to
+                    collect environmental and temperature-related
+                    information.
+                </p>
+
+                <p style="margin-top:15px;">
+                    Sensor data can be collected and processed
+                    for intelligent monitoring applications.
+                </p>
+
+                <div class="tech-list">
+                    ESP8266 • DHT11 • MLX90614 • IoT • ML
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 04
+                </div>
+
+                <h3>
+                    ☁️ AWS EC2 CI/CD Portfolio
+                </h3>
+
+                <p>
+                    A Cloud and DevOps project where this portfolio
+                    website is deployed on an AWS EC2 Linux server.
+                </p>
+
+                <p style="margin-top:15px;">
+                    GitHub Actions will be used to automate the
+                    deployment process whenever new code is pushed.
+                </p>
+
+                <div class="tech-list">
+                    AWS EC2 • Linux • Git • GitHub • Nginx
+                    • GitHub Actions • CI/CD
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CLOUD JOURNEY
+========================= -->
+
+<section id="cloud">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My Cloud & DevOps Journey
+        </h2>
+
+        <p class="section-subtitle">
+            Building practical knowledge step-by-step instead of
+            only studying cloud concepts theoretically.
+        </p>
+
+
+        <div class="cloud-box">
+
+            <h3 style="color:#38bdf8;">
+                Current Learning Path
+            </h3>
+
+            <p style="color:#cbd5e1; margin-top:10px;">
+                The goal is to understand how applications move
+                from development to production.
+            </p>
+
+
+            <div class="cloud-flow">
+
+                <div class="cloud-step">
+                    Linux
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    Networking
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    Git
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    GitHub
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    AWS
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    EC2
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    Nginx
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    CI/CD
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CI/CD PIPELINE
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            CI/CD Pipeline
+        </h2>
+
+        <p class="section-subtitle">
+            This portfolio is being developed as a practical
+            demonstration of automated cloud deployment.
+        </p>
+
+
+        <div class="pipeline">
+
+            <div class="pipeline-step">
+
+                <strong>01</strong>
+
+                <span>
+                    Write Code
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-step">
+
+                <strong>02</strong>
+
+                <span>
+                    Git Commit
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-step">
+
+                <strong>03</strong>
+
+                <span>
+                    Git Push
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-step">
+
+                <strong>04</strong>
+
+                <span>
+                    GitHub Actions
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-step">
+
+                <strong>05</strong>
+
+                <span>
+                    Deployment
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-step">
+
+                <strong>06</strong>
+
+                <span>
+                    AWS EC2
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     LEADERSHIP
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Leadership & Activities
+        </h2>
+
+        <p class="section-subtitle">
+            Technical society involvement and event coordination
+            during university.
+        </p>
+
+
+        <div class="leadership-grid">
+
+
+            <div class="leadership-card">
+
+                <h3>
+                    ⚙️ Society of Automation
+                </h3>
+
+                <p>
+                    Co-head of the Design Team, contributing to
+                    technical society activities, design work and
+                    team coordination.
+                </p>
+
+            </div>
+
+
+            <div class="leadership-card">
+
+                <h3>
+                    🎨 Event Coordination
+                </h3>
+
+                <p>
+                    Coordinated activities including Kratikala
+                    and Brushstroke during Spandan.
+                </p>
+
+            </div>
+
+
+            <div class="leadership-card">
+
+                <h3>
+                    🔬 Technical Events
+                </h3>
+
+                <p>
+                    Involved in coordinating technical activities
+                    including Jigyasa and Quantathon.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CURRENT LEARNING
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Currently Learning
+        </h2>
+
+        <p class="section-subtitle">
+            Technologies I am actively exploring to strengthen
+            my Cloud and DevOps foundation.
+        </p>
+
+
+        <div class="learning-list">
+
+
+            <div class="learning-item">
+
+                <h3>
+                    ☁️ AWS
+                </h3>
+
+                <p>
+                    EC2, IAM, S3, cloud infrastructure and
+                    fundamental AWS services.
+                </p>
+
+            </div>
+
+
+            <div class="learning-item">
+
+                <h3>
+                    🐧 Linux
+                </h3>
+
+                <p>
+                    Linux commands, permissions, processes,
+                    SSH, services and server management.
+                </p>
+
+            </div>
+
+
+            <div class="learning-item">
+
+                <h3>
+                    🌐 Networking
+                </h3>
+
+                <p>
+                    IP addresses, ports, protocols, DNS, HTTP,
+                    NAT, TCP/IP and network fundamentals.
+                </p>
+
+            </div>
+
+
+            <div class="learning-item">
+
+                <h3>
+                    ⚙️ DevOps
+                </h3>
+
+                <p>
+                    Git, GitHub, CI/CD, automation, Docker and
+                    deployment workflows.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECT STATUS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Current Project Status
+        </h2>
+
+
+        <div class="about-card">
+
+            <h3>
+                🚀 AWS EC2 + CI/CD Portfolio
+            </h3>
+
+            <p>
+                <strong>Status:</strong>
+                In Development
+            </p>
+
+            <br>
+
+            <p>
+                This portfolio is currently being developed locally.
+                The next stage is to connect it with Git and GitHub,
+                create an AWS EC2 Linux server, configure Nginx and
+                implement automated deployment using GitHub Actions.
+            </p>
+
+            <br>
+
+            <p>
+                The final objective is to update the website simply
+                by pushing new code to GitHub.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>
+                Let's Connect
+            </h2>
+
+            <p>
+                I am interested in Cloud Computing, AWS, DevOps,
+                Embedded Systems, Electronics and technology-driven
+                projects.
+            </p>
+
+
+            <div class="contact-links">
+
+                <!-- Replace these with your actual links -->
+
+                <a href="#" class="btn">
+                    GitHub
+                </a>
+
+                <a href="#" class="btn btn-outline">
+                    LinkedIn
+                </a>
+
+                <a href="#" class="btn btn-outline">
+                    Email
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h3>
+        Piyush Sharma
+    </h3>
+
+    <p>
+        Electronics • Cloud • AWS • Linux • DevOps • Embedded Systems
+    </p>
+
+    <p>
+        Built as a practical Cloud & CI/CD project.
+    </p>
+
+    <p style="margin-top:20px;">
+        © 2026 Piyush Sharma. All rights reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Piyush Sharma | Cloud & Electronics Engineer</title>
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+
+        .section-subtitle {
+            color: #94a3b8;
+            margin-bottom: 45px;
+            max-width: 750px;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(3, 10, 20, 0.95);
+            border-bottom: 1px solid #1e293b;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 80% 20%, #0c4a6e55, transparent 30%),
+                radial-gradient(circle at 20% 80%, #0369a155, transparent 25%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #0ea5e9;
+            border-radius: 25px;
+            color: #38bdf8;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #cbd5e1;
+            max-width: 800px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 7px;
+            background: #0284c7;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0369a1;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .btn-outline:hover {
+            background: #38bdf8;
+            color: #07111f;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+        }
+
+        .about-text {
+            color: #cbd5e1;
+            font-size: 17px;
+        }
+
+        .about-card {
+            background: #0f1d2e;
+            padding: 30px;
+            border: 1px solid #1e3a52;
+            border-radius: 12px;
+        }
+
+        .about-card h3 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        .about-card p {
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           QUICK INFO
+        ========================= */
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .info-card {
+            background: #0f1d2e;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #1e293b;
+        }
+
+        .info-card h3 {
+            color: #38bdf8;
+            font-size: 28px;
+        }
+
+        .info-card p {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .timeline {
+            border-left: 3px solid #0ea5e9;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            background: #0f1d2e;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border: 1px solid #1e293b;
+        }
+
+        .timeline-item h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item span {
+            color: #64748b;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skill-category {
+            margin-bottom: 35px;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #0f1d2e;
+            padding: 10px 17px;
+            border-radius: 25px;
+            border: 1px solid #334155;
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #0f1d2e;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: #0ea5e9;
+        }
+
+        .project-number {
+            color: #0284c7;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+        }
+
+        .tech-list {
+            margin-top: 20px;
+            color: #7dd3fc;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CLOUD JOURNEY
+        ========================= */
+
+        .cloud-box {
+            background: linear-gradient(
+                135deg,
+                #0c2a40,
+                #0f1d2e
+            );
+
+            border: 1px solid #075985;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .cloud-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 35px;
+        }
+
+        .cloud-step {
+            padding: 15px 20px;
+            background: #07111f;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: #38bdf8;
+        }
+
+        .arrow {
+            color: #64748b;
+            font-size: 25px;
+        }
+
+
+        /* =========================
+           CI/CD
+        ========================= */
+
+        .pipeline {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+        }
+
+        .pipeline-step {
+            padding: 20px 10px;
+            text-align: center;
+            background: #0f1d2e;
+            border: 1px solid #334155;
+            border-radius: 8px;
+        }
+
+        .pipeline-step strong {
+            display: block;
+            color: #38bdf8;
+            margin-bottom: 8px;
+        }
+
+        .pipeline-step span {
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           LEADERSHIP
+        ========================= */
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .leadership-card {
+            background: #0f1d2e;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+        }
+
+        .leadership-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .leadership-card p {
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           CURRENT LEARNING
+        ========================= */
+
+        .learning-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .learning-item {
+            padding: 25px;
+            background: #0f1d2e;
+            border-radius: 10px;
+            border-left: 4px solid #0284c7;
+        }
+
+        .learning-item h3 {
+            color: #38bdf8;
+        }
+
+        .learning-item p {
+            color: #94a3b8;
+            margin-top: 8px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 750px;
+            margin: auto;
+            padding: 45px;
+            background: #0f1d2e;
+            border: 1px solid #1e293b;
+            border-radius: 15px;
+        }
+
+        .contact-box h2 {
+            font-size: 35px;
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #94a3b8;
+        }
+
+        .contact-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #030a14;
+            padding: 35px 8%;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+        }
+
+        footer h3 {
+            color: #38bdf8;
+        }
+
+        footer p {
+            margin-top: 8px;
+            color: #64748b;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pipeline {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            nav ul {
+                display: none;
+            }
+
+            section {
+                padding: 65px 6%;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .learning-list {
+                grid-template-columns: 1fr;
+            }
+
+            .pipeline {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .cloud-box {
+                padding: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+            PS.
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#cloud">Cloud</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-tag">
+            🚀 Electronics • Cloud • DevOps
+        </div>
+
+        <h1>
+            Hi, I'm <span>Piyush Sharma</span>
+        </h1>
+
+        <h2>
+            Electronics & Communication Engineering Student
+            | Cloud & DevOps Enthusiast
+        </h2>
+
+        <p>
+            I am a B.Tech Electronics & Communication Engineering
+            student with a minor in Computer Science, passionate about
+            technology, embedded systems, cloud computing and modern
+            software infrastructure.
+        </p>
+
+        <p style="margin-top:15px;">
+            Currently building practical skills in AWS, Linux,
+            Networking, Git, GitHub, CI/CD and DevOps through
+            hands-on projects.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn">
+                View Projects
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Connect With Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <p class="section-subtitle">
+            A brief introduction to my academic background,
+            technical interests and current career direction.
+        </p>
+
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I am pursuing B.Tech in Electronics &
+                    Communication Engineering at GLA University,
+                    Mathura, with a minor in Computer Science.
+                </p>
+
+                <br>
+
+                <p>
+                    My technical journey started around electronics,
+                    embedded systems and IoT. I have worked with
+                    microcontrollers, sensors, communication modules
+                    and computer-vision based systems.
+                </p>
+
+                <br>
+
+                <p>
+                    Along with my electronics background, I am now
+                    expanding towards Cloud Computing and DevOps.
+                    I am learning Linux, Networking, AWS, Git,
+                    GitHub, CI/CD and cloud infrastructure.
+                </p>
+
+                <br>
+
+                <p>
+                    My approach is simple: instead of only learning
+                    concepts theoretically, I prefer understanding
+                    them by building practical projects.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h3>🎯 Career Focus</h3>
+
+                <p>
+                    • Cloud Computing
+                </p>
+
+                <p>
+                    • AWS
+                </p>
+
+                <p>
+                    • Linux & Networking
+                </p>
+
+                <p>
+                    • DevOps & CI/CD
+                </p>
+
+                <p>
+                    • Embedded Systems
+                </p>
+
+                <p>
+                    • Electronics
+                </p>
+
+                <p>
+                    • IoT
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     QUICK INFO
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <h3>B.Tech</h3>
+
+                <p>
+                    Electronics & Communication
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>CS</h3>
+
+                <p>
+                    Minor in Computer Science
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>AWS</h3>
+
+                <p>
+                    Cloud Learning
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>DevOps</h3>
+
+                <p>
+                    CI/CD & Automation
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+        <p class="section-subtitle">
+            My academic background and technical specialization.
+        </p>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>
+                    B.Tech — Electronics & Communication Engineering
+                </h3>
+
+                <p>
+                    GLA University, Mathura
+                </p>
+
+                <p>
+                    Minor: Computer Science
+                </p>
+
+                <span>
+                    Undergraduate Engineering
+                </span>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    Academic & Technical Focus
+                </h3>
+
+                <p>
+                    Electronics, Communication Systems, Embedded
+                    Systems, Networking, Programming, Cloud Computing
+                    and Software Technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Technical Skills
+        </h2>
+
+        <p class="section-subtitle">
+            Technologies and tools I am learning and working with.
+        </p>
+
+
+        <div class="skill-category">
+
+            <h3>☁️ Cloud & DevOps</h3>
+
+            <div class="skills">
+
+                <span class="skill">AWS</span>
+                <span class="skill">EC2</span>
+                <span class="skill">Cloud Computing</span>
+                <span class="skill">Git</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">GitHub Actions</span>
+                <span class="skill">CI/CD</span>
+                <span class="skill">Docker</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-category">
+
+            <h3>🐧 Linux & Networking</h3>
+
+            <div class="skills">
+
+                <span class="skill">Linux</span>
+                <span class="skill">Ubuntu</span>
+                <span class="skill">SSH</span>
+                <span class="skill">IP Addressing</span>
+                <span class="skill">TCP/IP</span>
+                <span class="skill">DNS</span>
+                <span class="skill">HTTP/HTTPS</span>
+                <span class="skill">Ports</span>
+                <span class="skill">NAT</span>
+                <span class="skill">Networking Fundamentals</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-category">
+
+            <h3>💻 Programming</h3>
+
+            <div class="skills">
+
+                <span class="skill">C</span>
+                <span class="skill">C++</span>
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-category">
+
+            <h3>🔧 Embedded & IoT</h3>
+
+            <div class="skills">
+
+                <span class="skill">ESP8266</span>
+                <span class="skill">ESP32-CAM</span>
+                <span class="skill">Arduino</span>
+                <span class="skill">MQ-2</span>
+                <span class="skill">DHT11</span>
+                <span class="skill">MLX90614</span>
+                <span class="skill">RFID</span>
+                <span class="skill">Blynk IoT</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-category">
+
+            <h3>📐 Engineering Tools</h3>
+
+            <div class="skills">
+
+                <span class="skill">Arduino IDE</span>
+                <span class="skill">LTspice</span>
+                <span class="skill">Cadence Virtuoso</span>
+                <span class="skill">NI LabVIEW</span>
+                <span class="skill">MATLAB</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-category">
+
+            <h3>🤖 Computer Vision & AI</h3>
+
+            <div class="skills">
+
+                <span class="skill">OpenCV</span>
+                <span class="skill">MediaPipe</span>
+                <span class="skill">LBPH</span>
+                <span class="skill">Machine Learning</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
+
+        <p class="section-subtitle">
+            Practical projects combining electronics, IoT,
+            computer vision and cloud technologies.
+        </p>
+
+
+        <div class="project-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 01
+                </div>
+
+                <h3>
+                    🚗 Smart Gas Detection Car
+                </h3>
+
+                <p>
+                    A Wi-Fi controlled robotic vehicle designed
+                    for gas detection and remote monitoring.
+                    The system uses a gas sensor to detect
+                    hazardous gases and can provide real-time
+                    alerts.
+                </p>
+
+                <p style="margin-top:15px;">
+                    Remote vehicle control and monitoring are
+                    implemented using an IoT-based approach.
+                </p>
+
+                <div class="tech-list">
+                    ESP32-CAM • MQ-2 • L298N • DC Motors • Wi-Fi
+                    • Telegram • IoT
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 02
+                </div>
+
+                <h3>
+                    🔐 Face Recognition Security System
+                </h3>
+
+                <p>
+                    A computer-vision based security system that
+                    performs face recognition and provides
+                    automated access control.
+                </p>
+
+                <p style="margin-top:15px;">
+                    The system uses a camera to identify registered
+                    users and controls a servo-based locking
+                    mechanism.
+                </p>
+
+                <div class="tech-list">
+                    Python • OpenCV • MediaPipe • LBPH • Arduino
+                    • ESP8266 • Servo • Buzzer
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 03
+                </div>
+
+                <h3>
+                    ❤️ HumanCare AI System
+                </h3>
+
+                <p>
+                    An IoT-based monitoring concept designed to
+                    collect environmental and temperature-related
+                    information.
+                </p>
+
+                <p style="margin-top:15px;">
+                    Sensor data can be collected and processed
+                    for intelligent monitoring applications.
+                </p>
+
+                <div class="tech-list">
+                    ESP8266 • DHT11 • MLX90614 • IoT • ML
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 04
+                </div>
+
+                <h3>
+                    ☁️ AWS EC2 CI/CD Portfolio
+                </h3>
+
+                <p>
+                    A Cloud and DevOps project where this portfolio
+                    website is deployed on an AWS EC2 Linux server.
+                </p>
+
+                <p style="margin-top:15px;">
+                    GitHub Actions will be used to automate the
+                    deployment process whenever new code is pushed.
+                </p>
+
+                <div class="tech-list">
+                    AWS EC2 • Linux • Git • GitHub • Nginx
+                    • GitHub Actions • CI/CD
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CLOUD JOURNEY
+========================= -->
+
+<section id="cloud">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My Cloud & DevOps Journey
+        </h2>
+
+        <p class="section-subtitle">
+            Building practical knowledge step-by-step instead of
+            only studying cloud concepts theoretically.
+        </p>
+
+
+        <div class="cloud-box">
+
+            <h3 style="color:#38bdf8;">
+                Current Learning Path
+            </h3>
+
+            <p style="color:#cbd5e1; margin-top:10px;">
+                The goal is to understand how applications move
+                from development to production.
+            </p>
+
+
+            <div class="cloud-flow">
+
+                <div class="cloud-step">
+                    Linux
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    Networking
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    Git
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    GitHub
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    AWS
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    EC2
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    Nginx
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="cloud-step">
+                    CI/CD
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CI/CD PIPELINE
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            CI/CD Pipeline
+        </h2>
+
+        <p class="section-subtitle">
+            This portfolio is being developed as a practical
+            demonstration of automated cloud deployment.
+        </p>
+
+
+        <div class="pipeline">
+
+            <div class="pipeline-step">
+
+                <strong>01</strong>
+
+                <span>
+                    Write Code
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-step">
+
+                <strong>02</strong>
+
+                <span>
+                    Git Commit
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-step">
+
+                <strong>03</strong>
+
+                <span>
+                    Git Push
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-step">
+
+                <strong>04</strong>
+
+                <span>
+                    GitHub Actions
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-step">
+
+                <strong>05</strong>
+
+                <span>
+                    Deployment
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-step">
+
+                <strong>06</strong>
+
+                <span>
+                    AWS EC2
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     LEADERSHIP
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Leadership & Activities
+        </h2>
+
+        <p class="section-subtitle">
+            Technical society involvement and event coordination
+            during university.
+        </p>
+
+
+        <div class="leadership-grid">
+
+
+            <div class="leadership-card">
+
+                <h3>
+                    ⚙️ Society of Automation
+                </h3>
+
+                <p>
+                    Co-head of the Design Team, contributing to
+                    technical society activities, design work and
+                    team coordination.
+                </p>
+
+            </div>
+
+
+            <div class="leadership-card">
+
+                <h3>
+                    🎨 Event Coordination
+                </h3>
+
+                <p>
+                    Coordinated activities including Kratikala
+                    and Brushstroke during Spandan.
+                </p>
+
+            </div>
+
+
+            <div class="leadership-card">
+
+                <h3>
+                    🔬 Technical Events
+                </h3>
+
+                <p>
+                    Involved in coordinating technical activities
+                    including Jigyasa and Quantathon.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CURRENT LEARNING
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Currently Learning
+        </h2>
+
+        <p class="section-subtitle">
+            Technologies I am actively exploring to strengthen
+            my Cloud and DevOps foundation.
+        </p>
+
+
+        <div class="learning-list">
+
+
+            <div class="learning-item">
+
+                <h3>
+                    ☁️ AWS
+                </h3>
+
+                <p>
+                    EC2, IAM, S3, cloud infrastructure and
+                    fundamental AWS services.
+                </p>
+
+            </div>
+
+
+            <div class="learning-item">
+
+                <h3>
+                    🐧 Linux
+                </h3>
+
+                <p>
+                    Linux commands, permissions, processes,
+                    SSH, services and server management.
+                </p>
+
+            </div>
+
+
+            <div class="learning-item">
+
+                <h3>
+                    🌐 Networking
+                </h3>
+
+                <p>
+                    IP addresses, ports, protocols, DNS, HTTP,
+                    NAT, TCP/IP and network fundamentals.
+                </p>
+
+            </div>
+
+
+            <div class="learning-item">
+
+                <h3>
+                    ⚙️ DevOps
+                </h3>
+
+                <p>
+                    Git, GitHub, CI/CD, automation, Docker and
+                    deployment workflows.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECT STATUS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Current Project Status
+        </h2>
+
+
+        <div class="about-card">
+
+            <h3>
+                🚀 AWS EC2 + CI/CD Portfolio
+            </h3>
+
+            <p>
+                <strong>Status:</strong>
+                In Development
+            </p>
+
+            <br>
+
+            <p>
+                This portfolio is currently being developed locally.
+                The next stage is to connect it with Git and GitHub,
+                create an AWS EC2 Linux server, configure Nginx and
+                implement automated deployment using GitHub Actions.
+            </p>
+
+            <br>
+
+            <p>
+                The final objective is to update the website simply
+                by pushing new code to GitHub.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>
+                Let's Connect
+            </h2>
+
+            <p>
+                I am interested in Cloud Computing, AWS, DevOps,
+                Embedded Systems, Electronics and technology-driven
+                projects.
+            </p>
+
+
+            <div class="contact-links">
+
+                <!-- Replace these with your actual links -->
+
+                <a href="#" class="btn">
+                    GitHub
+                </a>
+
+                <a href="#" class="btn btn-outline">
+                    LinkedIn
+                </a>
+
+                <a href="#" class="btn btn-outline">
+                    Email
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h3>
+        Piyush Sharma
+    </h3>
+
+    <p>
+        Electronics • Cloud • AWS • Linux • DevOps • Embedded Systems
+    </p>
+
+    <p>
+        Built as a practical Cloud & CI/CD project.
+    </p>
+
+    <p style="margin-top:20px;">
+        © 2026 Piyush Sharma. All rights reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
